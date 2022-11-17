@@ -1,7 +1,7 @@
 //-----------------------------Configuration Required for Fetching People HR Records---------------------------------
 exports.postPayloadOfPeopleHR = {
   contentType: "text/json",
-  peopleAppsurl: "https://api.peopleapps.in/Query",
+  peopleAppsUrl: "https://api.peopleapps.in/Query",
   method: "POST",
   apiKey: "76491cc3-48ff-496f-adaa-956894c08f3e",
   action: "GetQueryResultByQueryName",
