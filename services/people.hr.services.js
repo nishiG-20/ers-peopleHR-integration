@@ -1,17 +1,17 @@
-var requestModule = require("request");
+let requestModule = require("request");
 const enumVal = require("../enum/enum.js");
 
 exports.fetchDataOfPeopleHR = async (req) => {
-  const { postPayloadOfPeopleHR} = enumVal
-  const { contentType, peopleAppsurl, method, } = postPayloadOfPeopleHR
+  const { postPayloadOfPeopleHR } = enumVal
+  const { contentType, peopleAppsUrl, method, } = postPayloadOfPeopleHR
   return new Promise((resolve, reject) => {
     try {
-      var headers = {
+      let headers = {
         "Content-Type": contentType,
       };
-      var options = {
+      let options = {
         method: method,
-        url: peopleAppsurl,
+        url: peopleAppsUrl,
         headers: headers,
         json: true,
         body: req,
