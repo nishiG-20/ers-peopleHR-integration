@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 let bodyParser = require("body-parser");
-const peopleRoutes = require("./routes/people.hr");
+const peopleHrRoutes = require("./routes/peopleHr");
 
 const encodeURIComponent = bodyParser.urlencoded({ extended: false });
 app.use(encodeURIComponent);
@@ -20,7 +20,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/api", peopleRoutes);
+app.use("/api", peopleHrRoutes);
 const PORT = process.env.port || 5000;
 
 app.listen(PORT, () => {
