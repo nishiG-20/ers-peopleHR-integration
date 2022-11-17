@@ -1,11 +1,11 @@
-const services = require("../services/people.hr.services");
+const services = require("../services/peopleServices");
 const utils = require("../lib/utils");
 
-function controller() { }
+function controller() {}
 
-controller.prototype.fetchRecordsOfPeopleHR = async (req, res) => {
+controller.prototype.fetchPeopleHrRecords = async (req, res) => {
   try {
-    let status = await services.fetchDataOfPeopleHR(req.body);
+    let status = await services.fetchPeopleHrData(req.body);
     utils.sendAPIResponse(res, {
       statusCode: 200,
       result: status,
