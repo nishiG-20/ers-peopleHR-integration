@@ -26,3 +26,7 @@ exports.postPayloadOfErsRecords = {
   Authorization: "Bearer e0e1nhh5horvcvdkpss9hif89yu3d5",
   method: "GET",
 };
+
+exports.CONSTANT_VALUES = {
+  EMAIL: "@rstartec.com",
+}

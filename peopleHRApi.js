@@ -1,6 +1,7 @@
 const config = require("./enum/enum.js");
 const services = require("./services/peopleServices.js");
 const request = require("request");
+const enumVal = require('./enum/enum')
 
 const makeReqForFetchingPeopleHrEmpsData = () => {
   const { postPayloadOfPeopleHR } = config;
@@ -47,7 +48,7 @@ const makeOptionsForCreatingEmpInErs = (empDetails) => {
     first_name: empDetails["First Name"],
     last_name: empDetails["Last Name"],
     start_date: empDate,
-    email: `${empDetails["First Name"].toLowerCase()}.${empDetails["Last Name"].toLowerCase()}@rstartec.com`,
+    email: `${empDetails["First Name"].toLowerCase()}.${empDetails["Last Name"].toLowerCase()}${enumVal.CONSTANT_VALUES.EMAIL}`,
     resource_type_id: 1,
   };
 
