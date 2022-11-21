@@ -47,7 +47,7 @@ const makeOptionsForCreatingEmpInErs = (empDetails) => {
     first_name: empDetails["First Name"],
     last_name: empDetails["Last Name"],
     start_date: empDate,
-    email: `${empDetails["First Name"]}.${empDetails["Last Name"]}@rstartec.com`,
+    email: `${empDetails["First Name"].toLowerCase()}.${empDetails["Last Name"].toLowerCase()}@rstartec.com`,
     resource_type_id: 1,
   };
 

@@ -17,7 +17,7 @@ exports.postPayloadOfERS = {
   method: "POST",
 };
 
-//-------------------------- Configuration required for fetchng ERS Employee records -------------------------------------
+//-------------------------- Configuration required for fetching ERS Employee records -------------------------------------
 
 exports.postPayloadOfErsRecords = {
   ersUrl:
