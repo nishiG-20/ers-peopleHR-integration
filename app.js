@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 let bodyParser = require("body-parser");
 const peopleHrRoutes = require("./routes/peopleHr");
+const peopleApps = require("./peopleHrApi.js");
 
 const encodeURIComponent = bodyParser.urlencoded({ extended: false });
 app.use(encodeURIComponent);
