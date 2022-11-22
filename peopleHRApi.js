@@ -50,6 +50,7 @@ const makeOptionsForCreatingEmpInErs = (empDetails) => {
     start_date: empDate,
     email: `${empDetails["First Name"].toLowerCase()}.${empDetails["Last Name"].toLowerCase()}${enumVal.CONSTANT_VALUES.EMAIL}`,
     resource_type_id: 1,
+    udf_emp_id:empDetails["Employee Id"]
   };
 
   return {
@@ -81,7 +82,7 @@ function peopleApps() {
   ) => {
     for (let i = 0; i < peopleHREmpsData.length; i++) {
       let empId = peopleHREmpsData[i]["Employee Id"];
-      //Check Employee of above empId is present in ers or not
+      //Check Employee of above empId (People hr emp id) is present in ers or not
       if (!isEmpInErsOrNot(empId, ersEmpsData)) {
         //Create Emp in Ers
         await this.createEmpInErs(peopleHREmpsData[i]);
