@@ -27,14 +27,12 @@ app.listen(PORT, () => {
   console.log(`Server is Listening on PORT ${PORT}`);
 });
 
+setInterval(() => {
+  console.log(`People Apps Scheduler`, new Date());
+  peopleAppsScheduler.peopleHrErsScheduler()
+}, 14400000);
 
 setInterval(() => {
   console.log(`Jira Projects Scheduler`, new Date());
   coneJob.fetchJiraProjectRecords()
 }, 18000000);
-
-
-setInterval(() => {
-  console.log(`People Apps Scheduler`, new Date());
-  peopleAppsScheduler.peopleHrErsScheduler()
-}, 14400000);
