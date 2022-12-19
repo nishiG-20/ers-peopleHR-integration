@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
 const peopleHrRoutes = require("./routes/peopleHr");
-const peopleApps = require("./peopleHrApi.js");
+const peopleAppsScheduler = require("./peopleHrApi.js");
+const coneJob = require("./ersUpdateApi.js");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -25,3 +26,15 @@ const PORT = process.env.port || 5000;
 app.listen(PORT, () => {
   console.log(`Server is Listening on PORT ${PORT}`);
 });
+
+
+setInterval(() => {
+  console.log(`Jira Projects Scheduler`, new Date());
+  coneJob.fetchJiraProjectRecords()
+}, 18000000);
+
+
+setInterval(() => {
+  console.log(`People Apps Scheduler`, new Date());
+  peopleAppsScheduler.peopleHrErsScheduler()
+}, 14400000);
