@@ -12,7 +12,8 @@ const makeOptionsforJiraProjectRecords = (start, maxResults = 50) => {
 
   return {
     method: "POST",
-    url: "https://ers-dev.azurewebsites.net/api/fetchJiraTasks",
+    // url: "https://ers-dev.azurewebsites.net/api/fetchJiraTasks",
+    url: "http://localhost:5000/api/jiraScheduler",
     json: true,
     body: {
       // jql: `createdDate<=${currentDate} AND createdDate>=${oldDate}`,

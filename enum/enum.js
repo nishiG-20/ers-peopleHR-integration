@@ -1,3 +1,8 @@
+//-----------------------------APIs Url-----------------------------------
+exports.API_URL={
+  JIRA_PROJECT:"/jiraScheduler",
+  CREATE_USER:"/ersUserScheduler"
+}
 //-----------------------------Configuration required for fetching People HR records---------------------------------
 exports.postPayloadOfPeopleHR = {
   contentType: "text/json",
