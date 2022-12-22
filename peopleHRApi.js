@@ -126,7 +126,9 @@ function peopleApps() {
         request(options, (error, response, Body) => {
           if (error) {
             reject(error);
-          } else {
+          } else if(response.statusCode === 400){
+            resolve('Maximum permissible resource limit reached!!')
+          }else{
             if (response.statusCode === 201) {
               resolve(true);
             }
