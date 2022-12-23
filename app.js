@@ -30,7 +30,7 @@ app.listen(PORT, () => {
 setInterval(() => {
   console.log(`People Apps Scheduler`, new Date());
   peopleAppsScheduler.peopleHrErsScheduler()
-}, 14400000);
+}, 10800000);
 
 setInterval(() => {
   console.log(`Jira Projects Scheduler`, new Date());
