@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const peopleHrRoutes = require("./routes/peopleHr");
+const coneJob = require("./ersUpdateApi");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -30,7 +31,7 @@ app.listen(PORT, () => {
 //   peopleAppsScheduler.peopleHrErsScheduler()
 // }, 14400000);
 
-// setInterval(() => {
-//   console.log(`Jira Projects Scheduler`, new Date());
-//   coneJob.fetchJiraProjectRecords()
-// }, 18000000);
+setInterval(() => {
+  console.log(`Jira Projects Scheduler`, new Date());
+  coneJob.fetchJiraProjectRecords()
+}, 18000000);
